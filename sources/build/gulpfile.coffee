@@ -24,9 +24,10 @@ replace      = require 'gulp-replace'
 watch        = require 'gulp-watch'
 imageop      = require 'gulp-image-optimization'
 
-plugins  = [ 'jquery', 'modernizr', 'lodash', 'velocity', 'bootstrap', 'browser', 'bem', 'cookie', 'parsley', 'hoverIntent', 'history', 'scrollbar', 'slick' ]
+plugins  = [ 'jquery', 'lodash', 'bootstrap', 'browser', 'bem', 'cookie', 'scrollbar' ]
 
 layout   = 'public_html/layout'
+layout2  = 'uncompressed_html/layout'
 sources  = 'sources/'
 
 path     =
@@ -70,7 +71,6 @@ gulp.task 'html', ->
 	.pipe jade
 		pretty: "\t"
 	.pipe gulp.dest './public_html/'
-
 
 # JavaScript functions
 
