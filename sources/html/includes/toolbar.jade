@@ -1,0 +1,17 @@
+toolbar.toolbar
+	.row
+		.col-xs-5
+			a.nav-trigger(href="#")
+				include ../../../public_html/layout/images/svg/nav.svg
+			a.logo(href="/")
+		.col-xs-7.right
+			nav.nav.hidden-sm.hidden-xs
+				.nav__item(href="#") L&M
+				.nav__item(href="#") ЛАБОРАТОРИЯ ИДЕЙ
+				.nav__item(href="#") АКТИВНОСТИ
+			form.code
+				input.code__input(type="text", name="code", placeholder="ВВЕСТИ КОД С КАРТОЧКИ")
+				button.code__button(type="submit") ?
+			.profile
+				a.profile__picture(style="background-image: url(http://files5.adme.ru/files/news/part_10/102841/kuteev.jpg)", href="#")
+				.profile__badge 2

@@ -1,0 +1,57 @@
+include includes/header
+<body class="">
+include includes/sidebar
+.wrap
+	include includes/toolbar
+	.page
+		a.new(href="#")
+			| НОВОЕ НА САЙТЕ
+			.new__badge
+		.slider
+			a.slider__arrow.slider__arrow--left(href="#")
+				include ../../public_html/layout/images/svg/left.svg
+			a.slider__arrow.slider__arrow--right(href="#")
+				include ../../public_html/layout/images/svg/right.svg
+			.slider__content
+				.slider__item.slider__item--active
+					.slider__bg
+						.slider__picture(style="background-image: url(/layout/images/slider_bg_1.jpg)")
+				.slider__item
+					.slider__bg
+						.slider__picture(style="background-image: url(/layout/images/big_video_1366.jpg)")
+				.slider__item
+					.slider__bg
+						.slider__picture(style="background-image: url(/layout/images/slider_bg_1.jpg)")
+				.slider__item
+					.slider__bg
+						.slider__picture(style="background-image: url(/layout/images/big_video_1366.jpg)")
+		.container
+			.row.xxl-margin-bottom
+				.col-md-3.col-sm-6.xs-center.sm-right
+					a.banner.banner--article(href="#")
+						.banner__image(style="background-image: url(/layout/images/245x123.jpg)")
+						.banner__type Фото
+						.banner__content
+							.banner__text КАК ПРАВИЛЬНО ЗАКАТАТЬ РУКАВА РУБАШКИ?
+							.banner__tools
+								span
+									include ../../public_html/layout/images/svg/like.svg
+									| 123
+								span
+									include ../../public_html/layout/images/svg/comments.svg
+									| 1234
+				.col-md-3.col-sm-6.sm-left.xs-center
+					a.banner(href="#")
+						.banner__image(style="background-image: url(/layout/images/245x245_banners_gift.jpg.jpg)")
+						.banner__text КРУТЫЕ ПОДАРКИ  <br>КАЖДЫЕ ДВЕ НЕДЕЛИ!
+				.col-md-3.col-sm-6.xs-center.sm-right
+					a.banner(href="#")
+						.banner__image(style="background-image: url(/layout/images/245x245_banners_badges.jpg)")
+						.banner__text СОБИРАЙ СВОЮ КОЛЛЕКЦИЮ – ПОЛУЧАЙ ПРИЗЫ!
+				.col-md-3.col-sm-6.xs-center.sm-left
+					a.banner(href="#")
+						.banner__image(style="background-image: url(/layout/images/245x245_banners_finecut.jpg)")
+						.banner__text ПРОЙДИ ТЕСТ<br> FINE CUT
+						
+
+include includes/footer
