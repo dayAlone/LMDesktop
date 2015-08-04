@@ -1,0 +1,169 @@
+.toolbar {
+  height: 60px;
+  background-color: #1fb8e1;
+  width: 100%;
+  float: left;
+  line-height: 57px;
+  padding-right: 25px;
+  white-space: nowrap;
+}
+.toolbar .nav {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 2px;
+}
+.toolbar .nav__item {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 25px;
+  font-weight: 200;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.toolbar .nav__item + .nav__item:before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: rgba(255,255,255,0.5);
+  position: absolute;
+  left: -15px;
+  top: 2px;
+}
+.toolbar .nav__item:hover {
+  color: #e1114b;
+}
+.toolbar .code {
+  display: inline-block;
+  position: relative;
+  margin-left: 15px;
+  top: 1px;
+}
+.toolbar .code__button {
+  background: #1fb8e1;
+  border: 0;
+  width: 19px;
+  height: 19px;
+  -webkit-border-radius: 19px;
+  border-radius: 19px;
+  right: 3px;
+  top: 19px;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.24;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.toolbar .code__button:hover {
+  background-color: #e1114b;
+}
+.toolbar .code__input {
+  line-height: initial;
+  font-size: 12px;
+  width: 165px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  padding: 2px 25px 0 12px;
+  background-image: -webkit-linear-gradient(0deg, #083476 0%, #0a4e93 50%, #339fda 100%);
+  background-image: -moz-linear-gradient(0deg, #083476 0%, #0a4e93 50%, #339fda 100%);
+  background-image: -o-linear-gradient(0deg, #083476 0%, #0a4e93 50%, #339fda 100%);
+  background-image: -ms-linear-gradient(0deg, #083476 0%, #0a4e93 50%, #339fda 100%);
+  background-image: linear-gradient(90deg, #083476 0%, #0a4e93 50%, #339fda 100%);
+  -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.37);
+  box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.37);
+  -webkit-border-radius: 24px;
+  border-radius: 24px;
+  color: #fff;
+}
+.toolbar .code__input::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+.toolbar .code__input:-moz-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+.toolbar .code__input::-moz-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+.toolbar .code__input:-ms-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+.toolbar .profile {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  margin-left: 17px;
+}
+.toolbar .profile__picture {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+.toolbar .profile__badge {
+  background-image: -webkit-linear-gradient(45deg, #ee1350 0%, #ac0835 100%);
+  background-image: -moz-linear-gradient(45deg, #ee1350 0%, #ac0835 100%);
+  background-image: -o-linear-gradient(45deg, #ee1350 0%, #ac0835 100%);
+  background-image: -ms-linear-gradient(45deg, #ee1350 0%, #ac0835 100%);
+  background-image: linear-gradient(45deg, #ee1350 0%, #ac0835 100%);
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.3);
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  -webkit-border-radius: 18px;
+  border-radius: 18px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 11px;
+  position: absolute;
+  top: 5px;
+  right: -9px;
+}
+.toolbar .logo {
+  display: inline-block;
+  width: 192px;
+  height: 60px;
+  background: url("/layout/images/logo.png") top right no-repeat;
+}
+.toolbar svg,
+.toolbar a {
+  vertical-align: middle;
+}

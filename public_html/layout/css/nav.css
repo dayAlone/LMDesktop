@@ -1,0 +1,15 @@
+.nav-trigger {
+  width: 61px;
+  height: 60px;
+  background-color: #063e7f;
+  text-align: center;
+  display: inline-block;
+}
+.nav-trigger svg {
+  position: relative;
+  left: -1px;
+  top: 2px;
+}
+.nav-trigger:hover {
+  background-color: #e1114b;
+}

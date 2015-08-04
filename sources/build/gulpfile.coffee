@@ -1,5 +1,5 @@
 gulp         = require 'gulp'
-
+insert       = require 'gulp-insert'
 autoprefixer = require 'gulp-autoprefixer'
 cache        = require 'gulp-cached'
 cmq          = require 'gulp-combine-media-queries'
@@ -79,6 +79,11 @@ gulp.task 'js_plugins', ->
 	.pipe concat 'plugins.js'
 	.pipe gulp.dest path.js.sources
 
+
+gulp.task 'js_copy_plugins', ->
+	gulp.src loadPlugins plugins, 'js'
+	.pipe gulp.dest path.js.frontend
+
 gulp.task 'js_modernizr', ->
 	gulp.src loadPlugins plugins, 'js'
 	.pipe modernizr {
@@ -95,9 +100,13 @@ gulp.task 'js_coffee', ->
 	.pipe coffee()
 	.pipe gulp.dest "#{path.js.sources}/"
 
+gulp.task 'js_front_uncompress', ['js_coffee'], ->
+	gulp.src [ "#{path.js.sources}/script.js" ]
+	.pipe concat 'frontend.js'
+	.pipe gulp.dest path.js.frontend
+
 gulp.task 'js_front', ['js_coffee'], ->
 	gulp.src [ "#{path.js.sources}/plugins.js", "#{path.js.sources}/script.js" ]
-
 	.pipe concat 'frontend.js'
 	.pipe gulp.dest path.js.frontend
 
@@ -127,6 +136,15 @@ gulp.task 'css_stylus', ->
 	.pipe stylus
 		use: nib()
 	.pipe gulp.dest path.css.sources
+
+gulp.task 'css_stylus_uncompress', ->
+	gulp.src [ "#{path.css.sources}/import/*.styl", "!#{path.css.sources}/import/functions.styl", "!#{path.css.sources}/import/colors.styl" ]
+	.pipe insert.prepend('@import "functions.styl";\n @import "colors.styl";\n')
+	.pipe plumber
+		errorHandler: notify.onError("Error: <%= error.message %>")
+	.pipe stylus
+		use: nib()
+	.pipe gulp.dest path.css.frontend
 
 gulp.task 'css_front', ['css_stylus'], ->
 	gulp.src [ "#{path.css.sources}/plugins.css", "#{path.css.sources}/style.css" ]

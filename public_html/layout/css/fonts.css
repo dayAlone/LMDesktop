@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'LMDin';
+  font-weight: 100;
+  font-style: normal;
+  src: url("/layout/fonts/thin.eot");
+  src: url("/layout/fonts/thin.eot#iefix") format('embedded-opentype'), url("/layout/fonts/thin.woff2") format('woff2'), url("/layout/fonts/thin.woff") format('woff'), url("/layout/fonts/thin.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'LMDin';
+  font-weight: 200;
+  font-style: normal;
+  src: url("/layout/fonts/light.eot");
+  src: url("/layout/fonts/light.eot#iefix") format('embedded-opentype'), url("/layout/fonts/light.woff2") format('woff2'), url("/layout/fonts/light.woff") format('woff'), url("/layout/fonts/light.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'LMDin';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/layout/fonts/regular.eot");
+  src: url("/layout/fonts/regular.eot#iefix") format('embedded-opentype'), url("/layout/fonts/regular.woff2") format('woff2'), url("/layout/fonts/regular.woff") format('woff'), url("/layout/fonts/regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'LMDin';
+  font-weight: bold;
+  font-style: normal;
+  src: url("/layout/fonts/bold.eot");
+  src: url("/layout/fonts/bold.eot#iefix") format('embedded-opentype'), url("/layout/fonts/bold.woff2") format('woff2'), url("/layout/fonts/bold.woff") format('woff'), url("/layout/fonts/bold.ttf") format('truetype');
+}
